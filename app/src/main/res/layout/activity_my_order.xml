@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myorder_snackbar">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/multiStateView"
+        style="@style/MultiStateViewStyle">
+
+    <include layout="@layout/partial_tab_layout" />
+
+    </com.toolskart.android.customview.ScreenStateView>
+</RelativeLayout>

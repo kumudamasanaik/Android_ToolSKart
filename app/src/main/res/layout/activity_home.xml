@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/snack_barview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/multiStateView"
+        style="@style/MultiStateViewStyle">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_search_products"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimens_8"
+                        android:layout_marginBottom="@dimen/dimens_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_white"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:hint="@string/search_products"
+                        android:textColorHint="@color/colorTextGrey"
+                        android:textSize="@dimen/dimens_12sp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimens_20"
+                        android:layout_height="@dimen/dimens_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimens_12"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:layout_marginBottom="@dimen/dimens_2"
+                        android:layout_toRightOf="@+id/et_search_products"
+                        app:srcCompat="@drawable/ic_filter" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/view_pager_banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimens_6"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrey"
+                        android:gravity="start|center"
+                        android:padding="@dimen/dimens_5">
+
+                        <TextView
+                            android:id="@+id/tv_featured_view_all"
+                            style="@style/textView_view_all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/featured_products"
+                            android:textAllCaps="true" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_featured"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_4" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_8"
+                        android:background="@color/colorGrey"
+                        android:gravity="start|center"
+                        android:padding="@dimen/dimens_5">
+
+                        <TextView
+                            android:id="@+id/tv_offers_deals_view_all"
+                            style="@style/textView_view_all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offers_and_deals"
+                            android:textAllCaps="true" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_offers_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_4" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_8"
+                        android:background="@color/colorGrey"
+                        android:gravity="start|center"
+                        android:padding="@dimen/dimens_5">
+
+                        <!--    <TextView
+                                android:id="@+id/tv_hot_categories_view_all"
+                                style="@style/textView_view_all" />-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hot_categories"
+                            android:textAllCaps="true" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_hot_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_4" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.toolskart.android.customview.ScreenStateView>
+
+
+</LinearLayout>

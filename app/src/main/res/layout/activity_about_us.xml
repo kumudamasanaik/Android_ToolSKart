@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.aboutus.AboutUsActivity"
+    android:id="@+id/webview"
+    style="@style/web_view_style">
+</WebView>

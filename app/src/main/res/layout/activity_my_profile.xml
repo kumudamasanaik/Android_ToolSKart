@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".ui.myprofile.MyProfileActivity">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/my_profile_multiStateView"
+        style="@style/MultiStateViewStyle">
+
+        <RelativeLayout
+            android:id="@+id/main_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/iv_profile_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_290">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:srcCompat="@drawable/dummy_featured" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tv_profile_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/iv_profile_image_layout"
+                    android:layout_margin="@dimen/dimens_20"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/tv_profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tx_name"
+                        android:inputType="text"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textColorHint="@color/colorDarkTextGrey" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/tv_mob_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:hint="@string/tx_phone_number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textColorHint="@color/colorDarkTextGrey" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:hint="@string/tx_password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textColorHint="@color/colorDarkTextGrey"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:hint="@string/tx_confirm_password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textColorHint="@color/colorDarkTextGrey"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/tv_my_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:hint="@string/my_address"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textColorHint="@color/colorDarkTextGrey" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_update_profile"
+                        style="@style/buttons"
+                        android:layout_marginStart="@dimen/dimens_20"
+                        android:layout_marginTop="@dimen/dimens_20"
+                        android:layout_marginEnd="@dimen/dimens_20"
+                        android:text="@string/tx_update_profile" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/transaction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_45"
+                android:layout_below="@id/l1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/colorGrey"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/tx_transaction_history"
+                    android:textSize="@dimen/dimens_9sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimens_10"
+                    android:layout_height="@dimen/dimens_10"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimens_15"
+                    app:srcCompat="@drawable/ic_round_borded_right_arrow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.toolskart.android.customview.ScreenStateView>
+</android.support.v4.widget.NestedScrollView>

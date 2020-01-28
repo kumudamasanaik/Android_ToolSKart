@@ -1,0 +1,38 @@
+package com.toolskart.android.api
+
+class ApiType {
+    companion object {
+        const val LOGIN: String = "login"
+        const val REGISTER: String = "register"
+        const val OTP: String = "otp"
+        const val RESEND_OTP: String = "resend otp"
+        const val HOME: String = "Home"
+        const val NOTIFICATIONLIST: String = "notification"
+        const val CART: String = "cart"
+        const val MODIFY_CART = "MODIFY CART"
+        const val GET_WISHLIST: String = "get wishlist"
+        const val REMOVE_CART: String = "remove cart"
+        const val MY_WISH_LIST: String = "wishlist"
+        const val MY_ORDER ="my checkoutOrders"
+        const val CANCEL_ORDER ="cancel order "
+        const val ORDER_DETAILS ="order detail "
+        const val REVIEW = "review"
+        const val ADDRESS = "ADDRESS"
+        const val GET_ADDRESS = "GET_ADDRESS"
+        const val SEARCH_PRODUCTS = "search"
+        const val PRODUCT_LIST = "PRODUCT LIST"
+        const val MY_PROFILE="MY Profile"
+        const val UPDATE_MY_PROFILE="Update MY Profile"
+        const val PRODUCT_DETAIL= "Product_detail"
+        const val MODIFY_WISH_LIST = "MODIFY_WISH_LIST"
+        const val CTEATE_WISH_LIST = "CTEATE_WISH_LIST"
+        const val DELETE_WISH_LIST = "DELETE_WISH_LIST"
+        const val UPDATEADDRESS: String = "updateaddress"
+        const val DELETEADDRESS: String = "dleteaddress"
+        const val ADD_ADDRESS: String = "ADD_ADDRESS"
+        const val ABOUT_US: String = "About Us"
+        const val PRIVACY_POLICY: String = "PRIVACY_POLICY"
+        const val SHOP_BY_CATEGORY: String = "SHOP_BY_CATEGORY"
+        const val FEATURED_PRODUCT_LIST: String = "FEATURED_PRODUCT_LIST"
+    }
+}

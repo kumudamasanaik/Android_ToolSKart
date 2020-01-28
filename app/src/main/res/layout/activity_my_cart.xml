@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cart_snackbar"
+    android:orientation="vertical"
+    tools:context=".ui.mycart.MyCartActivity"
+    android:background="@color/colorGrey">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/cart_multiStateView"
+        style="@style/MultiStateViewStyle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout_cart"
+            android:layout_margin="@dimen/dimens_5"
+            tools:listitem="@layout/partial_cart_list_item" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dimens_5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/no_of_items"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_20"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_cart_total"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimens_12sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_no_of_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_mo_of_items"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimens_12sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/dots"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimens_12sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_5"
+                    android:text="@string/product_price"
+                    android:textColor="@color/colorTextBlue"
+                    android:textSize="@dimen/dimens_12sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_checkout"
+                style="@style/buttons"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:layout_marginStart="@dimen/dimens_30"
+                android:layout_marginEnd="@dimen/dimens_30"
+                android:layout_marginBottom="@dimen/dimens_15"
+                android:text="@string/tx_proceed_to_checkout" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    </com.toolskart.android.customview.ScreenStateView>
+</LinearLayout>

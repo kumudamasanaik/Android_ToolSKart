@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/multiStateView"
+        style="@style/MultiStateViewStyle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_outline_curve"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/filter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/dimens_15"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimens_5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/tx_filter"
+                        android:textColor="@color/colorTextBlue"
+                        android:textSize="@dimen/dimens_13sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/tx_apply_filter"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textSize="@dimen/dimens_11sp" />
+
+                </LinearLayout>
+
+                <View style="@style/view_style" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_20"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimens_5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/tx_sort_by"
+                        android:textColor="@color/colorTextBlue"
+                        android:textSize="@dimen/dimens_13sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/tx_relevance"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textSize="@dimen/dimens_11sp" />
+
+                </LinearLayout>
+
+                <View style="@style/view_style" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dimens_20"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/cb_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:buttonTint="@color/colorDarkTextGrey" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="2"
+                        android:text="@string/tx_product_sale"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textSize="@dimen/dimens_13sp" />
+
+                </LinearLayout>
+
+                <View style="@style/view_style" />
+
+
+                <LinearLayout
+                    android:id="@+id/iv_switch_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_20"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimens_5">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/listing_image"
+                        android:layout_width="@dimen/dimens_30"
+                        android:layout_height="@dimen/dimens_18"
+                        android:layout_gravity="center"
+                        />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/listing_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/grid"
+                        android:textColor="@color/colorDarkTextGrey"
+                        android:textSize="@dimen/dimens_12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_offer_supplies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                tools:listitem="@layout/partial_grid_product_list_item"
+                tools:spanCount="2" />
+        </LinearLayout>
+
+    </com.toolskart.android.customview.ScreenStateView>
+
+</LinearLayout>

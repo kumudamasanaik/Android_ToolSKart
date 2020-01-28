@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/layout_quantityView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_quantity_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_decrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:background="@drawable/ic_remove"
+            android:gravity="start"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_sku_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dimens_2"
+            android:layout_marginRight="@dimen/dimens_2"
+            android:background="@drawable/bg_button_grey"
+            android:gravity="center"
+            android:padding="@dimen/dimens_2"
+            android:text="@string/quantity"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimens_12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_add"
+            android:gravity="center_horizontal"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

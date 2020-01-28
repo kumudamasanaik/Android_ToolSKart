@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/layout_rating_star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_rating_button_border"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimens_2">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/rating_star"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimens_20"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            tools:text="@string/rating"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimens_15sp"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/dimens_10"
+                android:layout_height="@dimen/dimens_15"
+                android:layout_marginStart="@dimen/dimens_8"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_star_white_for_green_rectangle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

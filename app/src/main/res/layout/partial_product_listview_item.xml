@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_100"
+        android:layout_marginTop="@dimen/dimens_5"
+        android:layout_marginBottom="@dimen/dimens_5">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/image_product"
+            style="@style/product_image_style"
+            android:layout_marginEnd="@dimen/dimens_10" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_3"
+            android:layout_toEndOf="@+id/image_product"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/low_cat_prod_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/product_dummy_name"
+                android:textColor="@color/colorTextGreyDark"
+                android:textSize="@dimen/dimens_12sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tx_pro_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/product_title_name"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tx_pro_selling_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimens_2"
+                    android:text="@string/product_price"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_11sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimens_2"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_11sp"
+                    tools:text="@string/tx_mo_of_items" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tx_pro_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimens_2"
+                android:text="@string/product_price"
+                android:textSize="@dimen/dimens_12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

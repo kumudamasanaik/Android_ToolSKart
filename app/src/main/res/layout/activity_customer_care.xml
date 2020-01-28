@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.customercare.CustomerCareActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimens_20"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/tx_send_msg"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimens_14sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/tx_care_msg"
+            android:textColor="@color/colorDarkTextGrey"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/tx_helpline_number"
+                android:textSize="@dimen/dimens_13sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_20"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/mobile_number_tx"
+                android:textSize="@dimen/dimens_14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_45"
+            android:layout_marginBottom="@dimen/dimens_80"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                style="@style/text_input_edit_text_style"
+                android:backgroundTint="@color/colorGrey"
+                android:hint="@string/tx_name"
+                android:inputType="text" />
+
+            <android.support.v7.widget.AppCompatEditText
+                style="@style/text_input_edit_text_style"
+                android:layout_marginTop="@dimen/dimens_3"
+                android:backgroundTint="@color/colorGrey"
+                android:hint="@string/tx_mobile_number"
+                android:inputType="number" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/category"
+                style="@style/text_input_edit_text_style"
+                android:layout_marginTop="@dimen/dimens_15"
+                android:layout_marginEnd="@dimen/dimens_10"
+                android:text="@string/tx_grievance_category"
+                android:textColor="@color/colorDarkTextGrey" />
+
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_grievance_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimens_5"
+                tools:listitem="@layout/partial_drop_down_layout" />
+-->
+
+            <include
+                android:id="@+id/grievance_category_layout"
+                android:visibility="gone"
+                layout="@layout/partial_drop_down_layout"/>
+            <View
+                android:id="@+id/view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_1"
+                android:layout_marginTop="@dimen/dimens_2"
+                android:background="@color/colorGrey" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/text_input_edit_text_style"
+                android:layout_marginTop="@dimen/dimens_20"
+                android:text="@string/tx_description"
+                android:textColor="@color/colorDarkTextGrey" />
+
+            <android.support.v7.widget.AppCompatEditText
+                style="@style/text_description__input_edit_text_style" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/buttons"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimens_30"
+                android:layout_marginStart="@dimen/dimens_15"
+                android:layout_marginEnd="@dimen/dimens_15"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/tx_submit"
+                android:textSize="@dimen/dimens_15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

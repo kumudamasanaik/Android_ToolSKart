@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wish_list_snack_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey"
+    tools:context=".ui.wishlist.WishListActivity">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/wishList_multiStateView"
+        style="@style/MultiStateViewStyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_15"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:layout_marginEnd="@dimen/dimens_15"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimens_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tx_recent_items" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dimens_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/tx_sort_by_with_forword_arrows" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_wish_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter"
+                android:layout_margin="@dimen/dimens_3"
+                tools:listitem="@layout/partial_cart_list_item" />
+
+        </RelativeLayout>
+    </com.toolskart.android.customview.ScreenStateView>
+</LinearLayout>

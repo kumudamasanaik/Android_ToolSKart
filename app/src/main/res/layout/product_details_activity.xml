@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_detail_snack_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.productdetails.ProductDetailsActivity">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/product_detail_multiStateView"
+        style="@style/MultiStateViewStyle">
+
+        <LinearLayout
+            style="@style/linear_layout"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/product_detail_card_view"
+                style="@style/card_view_style">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dimens_15"
+                    android:paddingEnd="@dimen/dimens_15"
+                    android:paddingBottom="@dimen/dimens_15">
+
+                    <LinearLayout
+                        android:id="@+id/product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/pro_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/dummy_featured" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/image_wish_list"
+                            android:layout_width="@dimen/dimens_18"
+                            android:layout_height="@dimen/dimens_18"
+                            android:layout_marginTop="@dimen/dimens_10"
+                            android:layout_weight="0"
+                            android:padding="@dimen/dimens_1"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_wish_list" />
+                    </LinearLayout>
+                    <!--  <android.support.v7.widget.AppCompatImageView
+                          android:id="@+id/product_image"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/dummy_featured" />
+
+                      <android.support.v7.widget.AppCompatImageView
+                          android:id="@+id/image_wish_list"
+                          android:layout_width="@dimen/dimens_18"
+                          android:layout_height="@dimen/dimens_18"
+                          android:layout_alignParentEnd="true"
+                          android:layout_marginTop="@dimen/dimens_10"
+                          android:padding="@dimen/dimens_1"
+                          android:visibility="visible"
+                          app:srcCompat="@drawable/ic_wish_list" />
+  -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/product_dummy_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_50"
+                        android:layout_below="@id/product_image"
+                        android:layout_marginStart="@dimen/dimens_10"
+                        android:layout_marginEnd="@dimen/dimens_10"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/product_pictures" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_product_tittle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/product_dummy_images"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:textColor="@color/colorTextBlue"
+                        android:textSize="@dimen/dimens_12sp"
+                        tools:text="@string/product_dummy_name" />
+
+
+                    <LinearLayout
+                        android:id="@+id/delivery_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_product_tittle"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/delivery_dummy_date"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimens_13sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTextBlue"
+                            android:textSize="@dimen/dimens_13sp"
+                            tools:text="@string/delivery_dummy_date_text" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/special_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/delivery_date"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:textColor="@color/colorTextBlue"
+                            android:textSize="@dimen/dimens_13sp"
+                            tools:text="@string/product_price" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/product_price_selected_text"
+                            android:textColor="@color/colorTextGreen"
+                            android:textSize="@dimen/dimens_13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rating_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/special_price"
+                        android:layout_marginBottom="@dimen/dimens_10"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/layout_product_rating"
+                            layout="@layout/rating_button"
+                            android:layout_width="@dimen/dimens_60"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:layout_marginEnd="@dimen/dimens_10"
+                            android:layout_marginBottom="@dimen/dimens_5" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_total_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorTextGreen"
+                            tools:text="@string/dummy_text" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_add_to_cart"
+                        style="@style/buttons"
+                        android:layout_width="@dimen/dimens_220"
+                        android:layout_below="@id/rating_layout"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dimens_13"
+                        android:text="@string/add_to_cart"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_go_to_cart"
+                        style="@style/buttons"
+                        android:layout_width="@dimen/dimens_220"
+                        android:layout_below="@id/btn_add_to_cart"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dimens_13"
+                        android:text="@string/move_to_cart"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/card_view_style">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dimens_10"
+                    android:paddingTop="@dimen/dimens_10"
+                    android:paddingEnd="@dimen/dimens_10"
+                    android:paddingBottom="@dimen/dimens_20">
+
+                    <LinearLayout
+                        android:id="@+id/review_layout"
+                        style="@style/linear_layout"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tx_rating" />
+
+                            <View
+                                android:layout_width="@dimen/dimens_20"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/dimens_10"
+                                android:background="@color/colorDarkRed" />
+                        </LinearLayout>
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btn_review"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dimens_25"
+                            android:layout_marginStart="@dimen/dimens_50"
+                            android:layout_weight="1"
+                            android:background="@color/colorGrey"
+                            android:text="@string/write_review"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rating"
+                        style="@style/linear_layout"
+                        android:layout_below="@id/review_layout"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srb_borderColor="@color/colorGoldenYellow"
+                            app:srb_fillColor="@color/colorGoldenYellow"
+                            app:srb_numberOfStars="5"
+                            app:srb_rating="4"
+                            app:srb_starBorderWidth="1"
+                            app:srb_starSize="@dimen/dimens_15" />
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_no_of_customers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dimens_5"
+                            tools:text="@string/dummy_rating_text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linear_layout"
+                        android:layout_below="@id/rating"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimens_20"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/five_star"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                            <ProgressBar
+                                android:id="@+id/pb_five_star"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/horizontal_progress_bar" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_five_star"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/percentage"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/linear_layout"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/four_star"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                            <ProgressBar
+                                android:id="@+id/pb_four_star"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/horizontal_progress_bar" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_four_star"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/percentage"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/linear_layout"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/three_star"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                            <ProgressBar
+                                android:id="@+id/pb_three_star"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/horizontal_progress_bar" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_three_star"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/percentage"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/linear_layout"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/two_star"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                            <ProgressBar
+                                android:id="@+id/pb_two_star"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/horizontal_progress_bar" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_two_star"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/percentage"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/linear_layout"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/one_star"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                            <ProgressBar
+                                android:id="@+id/pb_one_star"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/horizontal_progress_bar" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_one_star"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/percentage"
+                                android:textSize="@dimen/dimens_15sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/card_view_style">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimens_15">
+
+                    <LinearLayout
+                        android:id="@+id/review_all_layout"
+                        style="@style/linear_layout"
+                        android:layout_gravity="start|center"
+                        android:layout_marginBottom="@dimen/dimens_10"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_reviews_text" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tx_no_of_reviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/no_of_reviews" />
+
+                        <View
+                            android:layout_width="@dimen/dimens_20"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dimens_10"
+                            android:background="@color/colorDarkRed" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_review_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/review_all_layout"
+                        android:orientation="vertical"
+                        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                        tools:listitem="@layout/item_view_all_reviews_rec" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </com.toolskart.android.customview.ScreenStateView>
+</android.support.v4.widget.NestedScrollView>

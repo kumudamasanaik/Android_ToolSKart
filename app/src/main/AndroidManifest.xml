@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.toolskart.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:vmSafeMode="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.payment.PaymentActivity"></activity>
+        <activity android:name=".ui.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.home.HomeActivity" />
+        <activity android:name=".ui.base.BaseActivity" />
+        <activity android:name=".ui.products.ProductsActivity" />
+        <activity android:name=".ui.productdetails.ProductDetailsActivity" />
+        <activity android:name=".ui.viewallproduct.ViewAllProductActivity" />
+        <activity android:name=".ui.myorder.MyOrderActivity" />
+        <activity android:name=".ui.myaddress.MyAddressActivity" />
+        <activity android:name=".ui.privacypolicy.PrivacyPolicyActivity" />
+        <activity android:name=".ui.notification.NotificationActivity" />
+        <activity android:name=".ui.aboutus.AboutUsActivity" />
+        <activity android:name=".ui.customercare.CustomerCareActivity" />
+        <activity android:name=".ui.shopbycategory.ShopByCategoryActivity" />
+        <activity android:name=".ui.offerzone.OfferZoneActivity" />
+        <activity android:name=".ui.mycart.MyCartActivity" />
+        <activity android:name=".ui.orderdetails.OrderDetailsActivity" />
+        <activity android:name=".ui.review.ReviewActivity" />
+        <activity android:name=".ui.wishlist.WishListActivity" />
+        <activity android:name=".ui.myprofile.MyProfileActivity" />
+        <activity android:name=".ui.transactionhistory.TransactionHistoryActivity" />
+        <activity android:name=".ui.productlist.ProductListActivity" />
+        <activity android:name=".ui.search.SearchActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan|adjustResize" />
+    </application>
+
+</manifest>

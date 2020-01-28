@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    style="@style/ToolbarStyleLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimens_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="@dimen/dimens_20"
+                android:layout_height="@dimen/dimens_20"
+                android:layout_marginEnd="@dimen/dimens_5"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_cart" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/cart_badge"
+                android:layout_width="@dimen/dimens_12"
+                android:layout_height="@dimen/dimens_12"
+                android:layout_gravity="start|top"
+                android:background="@drawable/cart_count_circle"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dimens_1"
+                android:paddingRight="@dimen/dimens_1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/dimens_7sp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/cart_layout"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/dimens_10">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

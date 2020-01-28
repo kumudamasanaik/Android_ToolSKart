@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimens_8">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/user_image"
+        android:layout_width="@dimen/dimens_40"
+        android:layout_height="@dimen/dimens_40"
+        android:layout_marginEnd="@dimen/dimens_15"
+        app:srcCompat="@drawable/ic_user_green" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/user_image"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_5"
+            android:text="@string/verification_text"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:gravity="start|center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/dimens_7"
+                android:layout_height="@dimen/dimens_7"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_5"
+                android:text="@string/dummy_date" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

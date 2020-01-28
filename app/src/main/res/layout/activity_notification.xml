@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimens_10"
+    android:id="@+id/notification_snack_bar"
+    tools:context=".ui.notification.NotificationActivity">
+
+    <com.toolskart.android.customview.ScreenStateView
+        android:id="@+id/multiStateView"
+        style="@style/MultiStateViewStyle">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_notification"
+        tools:listitem="@layout/items_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+    </com.toolskart.android.customview.ScreenStateView>
+
+</LinearLayout>

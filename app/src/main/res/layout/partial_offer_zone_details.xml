@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens_8">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="@dimen/dimens_90"
+        android:layout_height="@dimen/dimens_100"
+        android:padding="@dimen/dimens_20"
+        android:src="@drawable/dummy_featured"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/dummy_explanation"
+            android:textColor="@color/colorTextGreyDark"
+            android:textSize="@dimen/dimens_13sp"
+        android:fontFamily="@font/roboto_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimens_2"
+                android:text="@string/saving_text"
+                android:layout_gravity="center"
+                android:textColor="@color/colorTextGreen"
+                android:textSize="@dimen/dimens_11sp" />
+
+    </LinearLayout>
+</LinearLayout>

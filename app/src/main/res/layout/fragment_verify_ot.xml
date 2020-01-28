@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.verifyotp.VerifyOTP">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:text="@string/verify_mobile"
+        android:textSize="@dimen/dimens_12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:text="@string/enter_otp"
+        android:textColor="@color/colorTextGrey"
+        android:textSize="@dimen/dimens_10sp" />
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pinview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cursorVisible="false"
+        android:layout_margin="@dimen/dimens_10"
+        app:forceKeyboard="false"
+        app:inputType="number"
+        app:pinBackground="@drawable/pin_background"
+        app:pinHeight="@dimen/dimens_30"
+        app:pinLength="4"
+        app:pinWidth="@dimen/dimens_30" />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_confirm"
+        style="@style/buttons"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:layout_marginLeft="@dimen/dimens_60"
+        android:layout_marginRight="@dimen/dimens_60"
+        android:layout_marginBottom="@dimen/dimens_10"
+        android:text="@string/confirm" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimens_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dint_receive"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_10sp" />
+
+        <TextView
+            android:id="@+id/tv_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_5"
+            android:text="@string/resend"
+            android:textColor="@color/colorTextBlue"
+            android:textSize="@dimen/dimens_10sp" />
+    </LinearLayout>
+
+</LinearLayout>
